@@ -151,7 +151,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-20 animate-pulse"></div>
               <div className="absolute inset-4 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full opacity-30"></div>
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                src="https://i.postimg.cc/FKb1zsDy/profile1.png" 
                 alt="Aditya Mishra" 
                 className="absolute inset-8 w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
               />
