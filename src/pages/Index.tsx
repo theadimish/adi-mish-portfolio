@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -120,27 +119,26 @@ const Index = () => {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
-                <Mail className="w-5 h-5 mr-2" />
-                Get in Touch
-              </Button>
-              <Button size="lg" variant="outline" className="border-purple-200 text-purple-700 hover:bg-purple-50">
-                View Portfolio
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700" asChild>
+                <a href="mailto:adityaoflnpmishra@gmail.com">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Get in Touch
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="border-orange-200 text-orange-700 hover:bg-orange-50">
                 <Download className="w-5 h-5 mr-2" />
-                Download CV
+                Download Resume
               </Button>
             </div>
 
             <div className="flex space-x-6 pt-8">
-              <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
+              <a href="https://github.com/theadimish" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-600 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
+              <a href="https://www.linkedin.com/in/the-aditya-mishra/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-600 transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-purple-600 transition-colors">
+              <a href="mailto:adityaoflnpmishra@gmail.com" className="text-gray-400 hover:text-purple-600 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -367,15 +365,15 @@ const Index = () => {
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
+                <a href="mailto:adityaoflnpmishra@gmail.com" className="flex items-center space-x-4 hover:text-purple-200 transition-colors">
                   <div className="bg-purple-600 p-3 rounded-lg">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-purple-200">aditya.mishra@email.com</p>
+                    <p className="text-purple-200">adityaoflnpmishra@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 
                 <div className="flex items-center space-x-4">
                   <div className="bg-blue-600 p-3 rounded-lg">
@@ -399,13 +397,13 @@ const Index = () => {
               </div>
               
               <div className="flex space-x-4 pt-8">
-                <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                <a href="https://github.com/theadimish" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                <a href="https://www.linkedin.com/in/the-aditya-mishra/" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
                   <Linkedin className="w-6 h-6" />
                 </a>
-                <a href="#" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                <a href="mailto:adityaoflnpmishra@gmail.com" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
                   <Mail className="w-6 h-6" />
                 </a>
               </div>
