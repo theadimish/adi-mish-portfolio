@@ -1,12 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin, Phone, Download, Code, User, ArrowDown, ExternalLink, MapPin, Calendar } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Index = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Aditya Mishra'
+      };
+
+      await emailjs.send(
+        'service_qbipqhl', // Service ID
+        'template_a5724f3', // Template ID
+        templateParams,
+        'o7Xz40RlITVY-6FCL' // Public Key
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const skills = [
     { category: "Languages", items: ["Java", "Python", "C"] },
     { category: "Technologies", items: ["GitHub", "VS Code", "Eclipse", "PyCharm"] },
@@ -203,13 +269,13 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-6">
               <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">5+</div>
                   <p className="text-gray-600">Projects Completed</p>
                 </CardContent>
               </Card>
               <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">2+</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">1+</div>
                   <p className="text-gray-600">Years Experience</p>
                 </CardContent>
               </Card>
@@ -381,7 +447,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-purple-200">+91 XXXXX XXXXX</p>
+                    <p className="text-purple-200">+91 70111 66165</p>
                   </div>
                 </div>
                 
@@ -413,17 +479,60 @@ const Index = () => {
               <CardHeader>
                 <CardTitle className="text-white">Send a Message</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <Input placeholder="First Name" className="bg-white/10 border-white/20 text-white placeholder-white/70" />
-                  <Input placeholder="Last Name" className="bg-white/10 border-white/20 text-white placeholder-white/70" />
-                </div>
-                <Input placeholder="Email" className="bg-white/10 border-white/20 text-white placeholder-white/70" />
-                <Input placeholder="Subject" className="bg-white/10 border-white/20 text-white placeholder-white/70" />
-                <Textarea placeholder="Your message..." rows={5} className="bg-white/10 border-white/20 text-white placeholder-white/70" />
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold">
-                  Send Message
-                </Button>
+              <CardContent>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <Input 
+                      name="firstName"
+                      placeholder="First Name" 
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                    />
+                    <Input 
+                      name="lastName"
+                      placeholder="Last Name" 
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                    />
+                  </div>
+                  <Input 
+                    name="email"
+                    type="email"
+                    placeholder="Email" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  />
+                  <Input 
+                    name="subject"
+                    placeholder="Subject" 
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  />
+                  <Textarea 
+                    name="message"
+                    placeholder="Your message..." 
+                    rows={5} 
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  />
+                  <Button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold"
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
@@ -437,7 +546,7 @@ const Index = () => {
             "Code with purpose. Build with passion."
           </p>
           <p className="text-gray-400">
-            © 2024 Aditya Mishra. All rights reserved.
+            © 2025 Aditya Mishra. All rights reserved.
           </p>
         </div>
       </footer>
