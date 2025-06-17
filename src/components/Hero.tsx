@@ -113,25 +113,25 @@ const Hero = () => {
               />
             </div>
             
-            {/* Floating Elements */}
-            <div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-lg p-4 animate-bounce">
+            {/* Floating Elements - Repositioned for better visibility */}
+            <div className="absolute -top-8 -left-8 bg-white rounded-2xl shadow-xl p-4 animate-bounce border-2 border-purple-100">
               <div className="flex items-center space-x-2">
                 <Code className="w-6 h-6 text-purple-600" />
                 <span className="text-sm font-bold text-gray-800">Developer</span>
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-2xl shadow-lg p-4 animate-bounce" style={{animationDelay: '1s'}}>
+            <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-2xl shadow-xl p-4 animate-bounce border-2 border-white" style={{animationDelay: '1s'}}>
               <div className="flex items-center space-x-2">
                 <Zap className="w-6 h-6" />
-                <span className="text-sm font-bold">Innovator</span>
+                <span className="text-sm font-bold">Java & Python</span>
               </div>
             </div>
             
-            <div className="absolute top-10 -right-10 bg-white rounded-xl shadow-lg p-3 animate-bounce" style={{animationDelay: '2s'}}>
+            <div className="absolute top-8 -right-12 bg-white rounded-xl shadow-xl p-3 animate-bounce border-2 border-blue-100" style={{animationDelay: '2s'}}>
               <div className="text-center">
                 <div className="text-2xl font-bold text-purple-600">5+</div>
-                <div className="text-xs text-gray-600">Projects</div>
+                <div className="text-xs text-gray-600 font-semibold">Projects</div>
               </div>
             </div>
           </div>
