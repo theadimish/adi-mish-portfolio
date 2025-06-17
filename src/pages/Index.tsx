@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -73,6 +74,13 @@ const Index = () => {
     }
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const skills = [
     { category: "Languages", items: ["Java", "Python", "C"] },
     { category: "Technologies", items: ["GitHub", "VS Code", "Eclipse", "PyCharm"] },
@@ -111,19 +119,22 @@ const Index = () => {
       title: "TIMI – AI Assistant",
       description: "Built to automate PC tasks like file handling, music control, shutdown.",
       tech: ["Python", "QT Designer"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
+      url: "https://github.com/theadimish/TiMi.git"
     },
     {
       title: "Train Ticket Booking System",
       description: "GUI-based system for booking train tickets and calculating charges.",
       tech: ["Java", "Swing GUI"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
+      url: "#"
     },
     {
       title: "Foodie AI",
       description: "AI-powered system for detecting food and analyzing macros (calories, protein, fat).",
       tech: ["React.js", "Node.js", "Flask", "OpenCV", "NumPy", "Render"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      url: "https://github.com/theadimish/FoodieAI.git"
     }
   ];
 
@@ -132,7 +143,8 @@ const Index = () => {
       title: "Project Intern",
       company: "Oasis Infobyte",
       description: "Completed 5 Java development tasks and gained hands-on experience in designing and testing Java applications",
-      period: "2024"
+      period: "2024",
+      url: "https://oasisinfobyte.com/validation/validated.html"
     },
     {
       title: "Project Coordinator",
@@ -152,13 +164,13 @@ const Index = () => {
               Aditya Mishra
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors">About</a>
-              <a href="#experience" className="text-gray-700 hover:text-purple-600 transition-colors">Experience</a>
-              <a href="#skills" className="text-gray-700 hover:text-purple-600 transition-colors">Skills</a>
-              <a href="#services" className="text-gray-700 hover:text-purple-600 transition-colors">Services</a>
-              <a href="#projects" className="text-gray-700 hover:text-purple-600 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+              <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-purple-600 transition-colors">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-purple-600 transition-colors">About</button>
+              <button onClick={() => scrollToSection('experience')} className="text-gray-700 hover:text-purple-600 transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('skills')} className="text-gray-700 hover:text-purple-600 transition-colors">Skills</button>
+              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-purple-600 transition-colors">Services</button>
+              <button onClick={() => scrollToSection('projects')} className="text-gray-700 hover:text-purple-600 transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-purple-600 transition-colors">Contact</button>
             </div>
           </div>
         </div>
@@ -275,12 +287,6 @@ const Index = () => {
               </Card>
               <Card className="text-center p-6 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">1+</div>
-                  <p className="text-gray-600">Years Experience</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
                   <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
                   <p className="text-gray-600">Technologies</p>
                 </CardContent>
@@ -311,7 +317,21 @@ const Index = () => {
                   <div className="flex justify-between items-start">
                     <div>
                       <CardTitle className="text-xl text-gray-900">{exp.title}</CardTitle>
-                      <CardDescription className="text-lg font-medium text-purple-600">{exp.company}</CardDescription>
+                      <CardDescription className="text-lg font-medium text-purple-600">
+                        {exp.url ? (
+                          <a 
+                            href={exp.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:underline flex items-center gap-1"
+                          >
+                            {exp.company}
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </CardDescription>
                     </div>
                     <Badge variant="secondary">{exp.period}</Badge>
                   </div>
@@ -396,7 +416,11 @@ const Index = () => {
                     className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
-                    <ExternalLink className="w-6 h-6 text-white" />
+                    {project.url && project.url !== "#" && (
+                      <a href={project.url} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-6 h-6 text-white" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 <CardHeader>
