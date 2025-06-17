@@ -127,7 +127,7 @@ const Index = () => {
       description: "GUI-based system for booking train tickets and calculating charges.",
       tech: ["Java", "Swing GUI"],
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      url: "#"
+      url: "https://github.com/theadimish/TrainBookingSoftware.git"
     },
     {
       title: "Foodie AI",
