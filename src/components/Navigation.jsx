@@ -4,11 +4,7 @@ import { Switch } from '@/components/ui/switch';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 
-interface NavigationProps {
-  scrollToSection: (sectionId: string) => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ scrollToSection }) => {
+const Navigation = ({ scrollToSection }) => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
