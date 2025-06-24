@@ -74,76 +74,76 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-purple-900 to-blue-900 dark:from-purple-950 dark:to-blue-950 text-white">
+    <section id="contact" className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-purple-900 to-blue-900 dark:from-purple-950 dark:to-blue-950 text-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Let's Work Together</h2>
-          <p className="text-xl text-purple-200 dark:text-purple-300">Ready to start your next project?</p>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Let's Work Together</h2>
+          <p className="text-lg sm:text-xl text-purple-200 dark:text-purple-300">Ready to start your next project?</p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
+          <div className="space-y-6 sm:space-y-8 order-2 lg:order-1">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Get in Touch</h3>
             
             <div className="space-y-4">
               <a href="mailto:adityaoflnpmishra@gmail.com" className="flex items-center space-x-4 hover:text-purple-200 dark:hover:text-purple-300 transition-colors">
-                <div className="bg-purple-600 dark:bg-purple-700 p-3 rounded-lg">
-                  <Mail className="w-6 h-6" />
+                <div className="bg-purple-600 dark:bg-purple-700 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <p className="font-medium">Email</p>
-                  <p className="text-purple-200 dark:text-purple-300">adityaoflnpmishra@gmail.com</p>
+                <div className="min-w-0">
+                  <p className="font-medium text-sm sm:text-base">Email</p>
+                  <p className="text-purple-200 dark:text-purple-300 text-sm sm:text-base break-all">adityaoflnpmishra@gmail.com</p>
                 </div>
               </a>
               
               <div className="flex items-center space-x-4">
-                <div className="bg-blue-600 dark:bg-blue-700 p-3 rounded-lg">
-                  <Phone className="w-6 h-6" />
+                <div className="bg-blue-600 dark:bg-blue-700 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="font-medium">Phone</p>
-                  <p className="text-purple-200 dark:text-purple-300">+91 70111 66165</p>
+                  <p className="font-medium text-sm sm:text-base">Phone</p>
+                  <p className="text-purple-200 dark:text-purple-300 text-sm sm:text-base">+91 70111 66165</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="bg-orange-600 dark:bg-orange-700 p-3 rounded-lg">
-                  <MapPin className="w-6 h-6" />
+                <div className="bg-orange-600 dark:bg-orange-700 p-2 sm:p-3 rounded-lg flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <p className="font-medium">Location</p>
-                  <p className="text-purple-200 dark:text-purple-300">Bengaluru, India</p>
+                  <p className="font-medium text-sm sm:text-base">Location</p>
+                  <p className="text-purple-200 dark:text-purple-300 text-sm sm:text-base">Bengaluru, India</p>
                 </div>
               </div>
             </div>
             
-            <div className="flex space-x-4 pt-8">
-              <a href="https://github.com/theadimish" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
-                <Github className="w-6 h-6" />
+            <div className="flex space-x-3 sm:space-x-4 pt-6 sm:pt-8">
+              <a href="https://github.com/theadimish" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-lg transition-colors">
+                <Github className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a href="https://www.linkedin.com/in/the-aditya-mishra/" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
-                <Linkedin className="w-6 h-6" />
+              <a href="https://www.linkedin.com/in/the-aditya-mishra/" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-lg transition-colors">
+                <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
-              <a href="mailto:adityaoflnpmishra@gmail.com" className="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
-                <Mail className="w-6 h-6" />
+              <a href="mailto:adityaoflnpmishra@gmail.com" className="bg-white/10 hover:bg-white/20 p-2 sm:p-3 rounded-lg transition-colors">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
           </div>
           
-          <Card className="bg-white/10 dark:bg-white/5 backdrop-blur-md border-white/20 dark:border-white/10">
-            <CardHeader>
-              <CardTitle className="text-white">Send a Message</CardTitle>
+          <Card className="bg-white/10 dark:bg-white/5 backdrop-blur-md border-white/20 dark:border-white/10 order-1 lg:order-2">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-white text-lg sm:text-xl">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input 
                     name="firstName"
                     placeholder="First Name" 
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
-                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
+                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70 text-sm sm:text-base" 
                   />
                   <Input 
                     name="lastName"
@@ -151,7 +151,7 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required
-                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
+                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70 text-sm sm:text-base" 
                   />
                 </div>
                 <Input 
@@ -161,7 +161,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70 text-sm sm:text-base" 
                 />
                 <Input 
                   name="subject"
@@ -169,21 +169,21 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70 text-sm sm:text-base" 
                 />
                 <Textarea 
                   name="message"
                   placeholder="Your message..." 
-                  rows={5} 
+                  rows={4} 
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70 text-sm sm:text-base resize-none" 
                 />
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold"
+                  className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold text-sm sm:text-base py-2 sm:py-3"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>

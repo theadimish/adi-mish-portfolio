@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -28,12 +29,12 @@ const Index = () => {
       <Contact />
       
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-8 px-6">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-6 sm:py-8 px-4 sm:px-6">
         <div className="container mx-auto text-center">
-          <p className="text-lg font-medium mb-2">
+          <p className="text-base sm:text-lg font-medium mb-2">
             "Code with purpose. Build with passion."
           </p>
-          <p className="text-gray-400 dark:text-gray-500">
+          <p className="text-sm sm:text-base text-gray-400 dark:text-gray-500">
             © 2025 Aditya Mishra. All rights reserved.
           </p>
         </div>
