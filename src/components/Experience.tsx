@@ -22,21 +22,21 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 px-6 bg-gray-50">
+    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Experience</h2>
-          <p className="text-xl text-gray-600">My professional journey and achievements</p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Experience</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300">My professional journey and achievements</p>
         </div>
         
         <div className="space-y-8 max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow bg-white dark:bg-gray-900">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
-                    <CardTitle className="text-xl text-gray-900">{exp.title}</CardTitle>
-                    <CardDescription className="text-lg font-medium text-purple-600">
+                    <CardTitle className="text-xl text-gray-900 dark:text-white">{exp.title}</CardTitle>
+                    <CardDescription className="text-lg font-medium text-purple-600 dark:text-purple-400">
                       {exp.url ? (
                         <a 
                           href={exp.url} 
@@ -52,11 +52,11 @@ const Experience = () => {
                       )}
                     </CardDescription>
                   </div>
-                  <Badge variant="secondary">{exp.period}</Badge>
+                  <Badge variant="secondary" className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200">{exp.period}</Badge>
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700">{exp.description}</p>
+                <p className="text-gray-700 dark:text-gray-300">{exp.description}</p>
               </CardContent>
             </Card>
           ))}

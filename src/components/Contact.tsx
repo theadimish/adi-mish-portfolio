@@ -74,11 +74,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-purple-900 to-blue-900 text-white">
+    <section id="contact" className="py-20 px-6 bg-gradient-to-br from-purple-900 to-blue-900 dark:from-purple-950 dark:to-blue-950 text-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">Let's Work Together</h2>
-          <p className="text-xl text-purple-200">Ready to start your next project?</p>
+          <p className="text-xl text-purple-200 dark:text-purple-300">Ready to start your next project?</p>
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -86,33 +86,33 @@ const Contact = () => {
             <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
             
             <div className="space-y-4">
-              <a href="mailto:adityaoflnpmishra@gmail.com" className="flex items-center space-x-4 hover:text-purple-200 transition-colors">
-                <div className="bg-purple-600 p-3 rounded-lg">
+              <a href="mailto:adityaoflnpmishra@gmail.com" className="flex items-center space-x-4 hover:text-purple-200 dark:hover:text-purple-300 transition-colors">
+                <div className="bg-purple-600 dark:bg-purple-700 p-3 rounded-lg">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-purple-200">adityaoflnpmishra@gmail.com</p>
+                  <p className="text-purple-200 dark:text-purple-300">adityaoflnpmishra@gmail.com</p>
                 </div>
               </a>
               
               <div className="flex items-center space-x-4">
-                <div className="bg-blue-600 p-3 rounded-lg">
+                <div className="bg-blue-600 dark:bg-blue-700 p-3 rounded-lg">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-purple-200">+91 70111 66165</p>
+                  <p className="text-purple-200 dark:text-purple-300">+91 70111 66165</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="bg-orange-600 p-3 rounded-lg">
+                <div className="bg-orange-600 dark:bg-orange-700 p-3 rounded-lg">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-purple-200">Bengaluru, India</p>
+                  <p className="text-purple-200 dark:text-purple-300">Bengaluru, India</p>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <Card className="bg-white/10 backdrop-blur-md border-white/20">
+          <Card className="bg-white/10 dark:bg-white/5 backdrop-blur-md border-white/20 dark:border-white/10">
             <CardHeader>
               <CardTitle className="text-white">Send a Message</CardTitle>
             </CardHeader>
@@ -143,7 +143,7 @@ const Contact = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
                   />
                   <Input 
                     name="lastName"
@@ -151,7 +151,7 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                    className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
                   />
                 </div>
                 <Input 
@@ -161,7 +161,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
                 />
                 <Input 
                   name="subject"
@@ -169,7 +169,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
                 />
                 <Textarea 
                   name="message"
@@ -178,7 +178,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder-white/70" 
+                  className="bg-white/10 dark:bg-white/5 border-white/20 dark:border-white/10 text-white placeholder-white/70" 
                 />
                 <Button 
                   type="submit"
