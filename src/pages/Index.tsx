@@ -18,7 +18,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
       <Navigation scrollToSection={scrollToSection} />
       <Hero />
       <About />
@@ -29,12 +29,12 @@ const Index = () => {
       <Contact />
       
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-6">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-8 px-6">
         <div className="container mx-auto text-center">
           <p className="text-lg font-medium mb-2">
             "Code with purpose. Build with passion."
           </p>
-          <p className="text-gray-400">
+          <p className="text-gray-400 dark:text-gray-500">
             © 2025 Aditya Mishra. All rights reserved.
           </p>
         </div>
