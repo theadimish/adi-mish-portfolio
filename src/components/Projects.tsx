@@ -13,7 +13,7 @@ const Projects = () => {
       url: "https://github.com/theadimish/TiMi.git"
     },
     {
-      title: "Train Ticket Booking System",
+      title: "Train Ticket Booking System", 
       description: "GUI-based system for booking train tickets and calculating charges.",
       tech: ["Java", "Swing GUI"],
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Foodie AI",
       description: "AI-powered system for detecting food and analyzing macros (calories, protein, fat).",
       tech: ["React.js", "Node.js", "Flask", "OpenCV", "NumPy", "Render"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
+      image: "https://i.postimg.cc/tTmwhQbY/Foodie-AI.png",
       url: "https://github.com/theadimish/FoodieAI.git"
     }
   ];
