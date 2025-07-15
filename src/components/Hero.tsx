@@ -108,8 +108,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-3xl rotate-6 opacity-20"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-3xl -rotate-6 opacity-20"></div>
               <img 
-                src="https://i.postimg.cc/4dKhxVNj/TiMi.png" 
-                alt="TIMI - AI Assistant Project" 
+                src="https://i.postimg.cc/FKb1zsDy/profile1.png" 
+                alt="Aditya Mishra" 
                 className="relative w-full h-full object-cover rounded-3xl border-4 border-white dark:border-gray-700 shadow-2xl z-10"
               />
             </div>
