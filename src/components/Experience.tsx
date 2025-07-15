@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +16,7 @@ const Experience = () => {
       title: "Project Coordinator",
       company: "Young Mind Creations Technologies Pvt. Ltd.",
       description: "Managed team execution for a confidential mobile app project and enhanced Android app development skills",
-      period: "2024"
+      period: "2024-2025"
     }
   ];
 
