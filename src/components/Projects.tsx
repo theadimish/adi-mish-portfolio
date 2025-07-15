@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +9,7 @@ const Projects = () => {
       title: "TIMI – AI Assistant",
       description: "Built to automate PC tasks like file handling, music control, shutdown.",
       tech: ["Python", "QT Designer"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
+      image: "https://i.postimg.cc/4dKhxVNj/TiMi.png",
       url: "https://github.com/theadimish/TiMi.git"
     },
     {
