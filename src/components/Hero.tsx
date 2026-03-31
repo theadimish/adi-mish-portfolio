@@ -36,7 +36,7 @@ const Hero = () => {
             
             <div className="space-y-3 sm:space-y-4">
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200">
-                Tech Builder & Problem Solver
+                Software Developer with QA & Testing Mindset
               </h2>
               <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl">
                 Passionate Computer Science professional specializing in{" "}
