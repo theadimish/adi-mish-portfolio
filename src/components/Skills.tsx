@@ -11,7 +11,8 @@ const Skills = () => {
     { category: "Databases", items: ["MySQL"] },
     { category: "Tools", items: ["Android Studio", "Sublime Text", "QT Designer", "MS Office"] },
     { category: "Fundamentals", items: ["DSA", "DBMS", "Artificial Intelligence"] },
-    { category: "Soft Skills", items: ["Problem Solving", "Organizing", "Time Management"] }
+    { category: "Soft Skills", items: ["Problem Solving", "Organizing", "Time Management"] },
+    { category: "QA", items: ["Postman", "STLC", "Version control using Git & GitHub"] }
   ];
 
   return (
