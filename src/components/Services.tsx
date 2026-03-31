@@ -23,6 +23,11 @@ const Services = () => {
       title: "Java Services",
       description: "Web App Dev, Android App Dev, Desktop GUI with Java Swing",
       icon: "☕"
+    },
+    {
+      title: "API Development & Testing",
+      description: "Designing and integrating REST APIs, along with testing endpoints using Postman to ensure correct data flow, response validation, and error handling across applications.",
+      icon: "🔗"
     }
   ];
 
@@ -34,7 +39,7 @@ const Services = () => {
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300">What I can help you with</p>
         </div>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-gray-800">
               <CardHeader className="pb-3">
