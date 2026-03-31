@@ -23,6 +23,11 @@ const Services = () => {
       title: "Java Services",
       description: "Web App Dev, Android App Dev, Desktop GUI with Java Swing",
       icon: "☕"
+    },
+    {
+      title: "API Development & Testing",
+      description: "Designing and integrating REST APIs, along with testing endpoints using Postman to ensure correct data flow, response validation, and error handling across applications.",
+      icon: "🔗"
     }
   ];
 
